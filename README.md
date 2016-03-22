@@ -20,7 +20,32 @@ We'd setup our settings route, and this would be displayed in our main section w
 
 We could just create a tabs component that changes what we can see depending on what tab has been clicked, but it means our URL will always stick at `/settings` rather than changing between `/settings/notifications` and `/settings/user`.
 
-This is where nested views come in. As mentioend before with states, a state can have multiple children states. These will then be rendered inside of our parent state - but we must make sure that we use the `ui-view` directive inside our parent state too.
+This is where nested views come in. As mentioned before with states, a state can have multiple children states. These will then be rendered inside of our parent state - but we must make sure that we use the `ui-view` directive inside our parent state too.
+
+Our previous setup might've looked like this:
+
+```js
+angular
+	.module('app', ['ui.router'])
+	.config(function ($stateProvider) {
+		$stateProvider
+			.state('settings', {
+				url: '/settings',
+				templateUrl: 'views/settings.html',
+				controller: 'SettingsController'
+			})
+			.state('settingsUser', {
+                url: '/settings/user',
+                templateUrl: 'views/settings/user.html',
+                controller: 'UserSettingsController'
+            })
+            .state('settingsNotifications', {
+                url: '/settings/notifications',
+                templateUrl: 'views/settings/notifications.html',
+                controller: 'NotificationsSettingsController'
+            })
+	});
+```
 
 Let's setup our settings example in `uiRouter`.
 
@@ -46,6 +71,8 @@ angular
             })
 	});
 ```
+
+We're not saving much code here - but by having child states it means we can render those states *inside* the parent state - the first example of code would replace the settings state with either the notifications or user settings state.
 
 You'll notice how we state the parent controller in the name of the state. We put the parent name first, then a dot, and then the actual state name. This tells `uiRouter` that `settings` is the parent state.
 
