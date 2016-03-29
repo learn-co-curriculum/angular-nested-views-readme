@@ -12,7 +12,7 @@ As mentioned earlier, `uiRouter` offers us nested views. These are extremely pow
 
 ## Nested View
 
-Imagine that we have normal setup for a web page - a header, a footer, and everything in between those change depending on what page we are on. This is great for most cases - we can swap between different pages such as home, about, contact, etc.
+Imagine that we have a normal setup for a web page - a header, a footer, and everything in between those change depending on what page we are on. This is great for most cases - we can swap between different pages such as home, about, contact, etc.
 
 But what if we want to have a settings page, with multiple different pages for us to look at? We might want to be able to edit profile information, but also change our notification preferences or even have a "delete your account page".
 
@@ -95,3 +95,4 @@ Now our user and notifications pages will be rendered underneath the settings na
 Also, when we go to `/settings/user`, `uiRouter` automatically detects that our parent state is `settings`, and puts this into our main applications `<div ui-view>`. It'll then sort out the children states, so it renders the page correctly.
 
 It's important to note that when we load a child state, such as `settings.user`, it'll resolve all the parent state's resolves. If we had a resolve on `settings` to fetch settings data, going to our `settings.user` state will load that resolve on the `settings` state.
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-nested-views-readme'>Angular Nested Views </a> on Learn.co and start learning to code for free.</p>
