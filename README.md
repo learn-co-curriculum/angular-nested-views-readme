@@ -90,9 +90,11 @@ Now, inside of our `settings.html` we need to make sure we include the `ui-view`
 </div>
 ```
 
-Now our user and notifications pages will be rendered underneath the settings navigaiton - neat!
+Now our user and notifications pages will be rendered underneath the settings navigation - neat!
 
 Also, when we go to `/settings/user`, `uiRouter` automatically detects that our parent state is `settings`, and puts this into our main applications `<div ui-view>`. It'll then sort out the children states, so it renders the page correctly.
 
 It's important to note that when we load a child state, such as `settings.user`, it'll resolve all the parent state's resolves. If we had a resolve on `settings` to fetch settings data, going to our `settings.user` state will load that resolve on the `settings` state.
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-nested-views-readme'>Angular Nested Views </a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-nested-views-readme'>Angular Nested Views </a> on Learn.co and start learning to code for free.</p>
