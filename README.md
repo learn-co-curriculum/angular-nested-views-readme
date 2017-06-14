@@ -2,7 +2,7 @@
 
 ## Overview
 
-As mentioned earlier, `uiRouter` offers us nested views. These are extremely powerful - allowing us to have views inside views!
+As mentioned earlier, `uiRouter` offers us nested views. These are extremely powerful and allow us to have views inside views!
 
 ## Objectives
 
