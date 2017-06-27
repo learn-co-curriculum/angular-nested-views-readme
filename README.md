@@ -2,7 +2,7 @@
 
 ## Overview
 
-As mentioned earlier, `uiRouter` offers us nested views. These are extremely powerful - allowing us to have views inside views!
+As mentioned earlier, `uiRouter` offers us nested views. These are extremely powerful and allow us to have views inside views!
 
 ## Objectives
 
@@ -94,6 +94,6 @@ Now our user and notifications pages will be rendered underneath the settings na
 
 Also, when we go to `/settings/user`, `uiRouter` automatically detects that our parent state is `settings` and puts this into our main application's `<div ui-view>`. It'll then sort out the child states to render the page correctly.
 
-It's important to note that when we load a child state, such as `settings.user`, it'll resolve all the parent state's resolves. If we had a resolve on `settings` to fetch settings data, going to our `settings.user` state will load that resolve on the `settings` state.
+It's important to note that when we load a child state, such as `settings.user`, it'll resolve all the parent state's resolves. If we had a resolve on `settings` to fetch settings data, going to our `settings.user` state would load that resolve on the `settings` state.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-nested-views-readme'>Angular Nested Views</a> on Learn.co and start learning to code for free.</p>
